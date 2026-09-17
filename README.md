@@ -1,27 +1,30 @@
-# New York Yellow Texi Data in Febrary 2022
-=================================================================
-## DataScience Term Project
-## 1) Source and explanation on the dataset (texts)
-The yellow texi records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. 
-The data used in the attached datasets were collected and provided to the NYC Taxi by technology providers authorized under the Taxicab Passenger Enhancement Programs(TPEP/LPEP). 
-The trip data was not created by the TLC, and TLC makes no representations as to the accuracy of these data.
+# NYC Taxi Trend Analysis
 
-+ In this dataset, we are considering only the Yellow Taxi Data for the month of Febrary 2022.<br><br>
-+ This dataset can be downloaded from the url below. (2022_February_Yellow Taxi Trip Records.CSV)<br>
-    https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+A data-science course project exploring NYC yellow taxi trip records with Python notebooks.
 
-## 2) Objective of your analysis <br>  (texts; what you want to get by analyzing this dataset)
-<u>Providing practical analysis for taxi drivers</u> is the main objective of our data set. <br>Since customer’s taxi demand forecasts are only predictable based on accumulated data, these analyses are very useful for taxi drivers. Based on our analysis, taxi drivers can immediately know where there are many customers at a specific time zone.<br><br>
-By analyzing a dataset of approximately 3 million rows, we can see which places are most in customer demand at certain times. Also, you can see which regions have the highest customer demand, not only by time zone but also by day of the week.
-<br><br>
-Furthermore, with these data, we're going to come up with three more interesting analyses.<br><br>
-<u>The first is to analyze the section and time zone where the most tips come out.</u> Tip is an important source of income for New York taxi drivers.  So we're going to analyze the sections and time zones that have the most tips.<br><br>
-<u>The second is the trend change analysis in New York City.</u> Based on the last 10 years of data tracking the route of taxis, we can analyze the trend of changing hot places for New Yorkers by organizing sections with high congestion and frequency by year.<br><br>
-<u>The third is the trend analysis of destinations by number of passengers.</u> Dataset contains the number of passengers in the taxi. When you take a taxi alone or in groups, the origin and destination can usually have different characteristics. For example, areas where a lot of group guests get on or off may be areas where people are more likely to gather, such as parties, concerts, tourist attractions, and transportation centers. The correlation between these passengers and their location will be shown in the analysis.
+## Questions
 
-## 3) Description on the dataset (statistics, tables, plots, missing values, outliers, ... etc) Make it look nice and readable.
+The project explored how demand, destinations, and recorded tips vary by time, location, and passenger count. The initial dataset covered February 2022 and contained approximately three million trips.
 
-### Attributes
+## Data and Workflow
+
+The records include pickup and drop-off times and zones, passenger counts, distances, fares, payment types, and recorded tips.
+
+- [NYC TLC trip records](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
+- [Analysis notebook 1](termProject_1.ipynb)
+- [Analysis notebook 2](termProject_2.ipynb)
+
+I used this project to practice examining a large real-world dataset and looking for patterns through grouped analysis in Python.
+
+## Scope
+
+This repository contains exploratory analysis notebooks. The patterns in one period should not be treated as a validated demand-forecasting model.
+
+The `tip_amount` field includes automatically recorded credit-card tips and excludes cash tips, which matters when interpreting tipping patterns. The source records are supplied to the TLC by technology providers and may contain data-quality issues.
+
+<details>
+<summary>Dataset fields</summary>
+
 |column_name|description|
 |-----------|:-----------|
 |VendorID|A code indicating the TPEP provider that provided the record. <br>1 : Creative Mobile Technologies <br>2 : VeriFone Inc.|
@@ -43,3 +46,4 @@ Furthermore, with these data, we're going to come up with three more interesting
 |total_amount|The total amount charged to passengers. Does not include cash tips.|
 |congestion_surcharge|It represents the additional cost of New York traffic congestion.|
 
+</details>
